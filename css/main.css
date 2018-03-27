@@ -1,0 +1,778 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* eg: @include user-select(none); */
+/* eg: @include rotate(45deg); */
+/* eg: @include translate3d(0,0,0); */
+/* eg: @include border-radius(3px); */
+/*------------------------------------------------------------------
+  	[FONTS]
+------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+  	[The "base.scss" contains basic default element styles
+  		(colors, typography, margins & padding).]
+------------------------------------------------------------------*/
+/*----BASE-----*/
+html {
+  font-size: 1rem;
+}
+
+body {
+  color: #272425;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 1rem;
+}
+
+.wrapper {
+  min-width: 260px;
+  margin: 0 auto;
+}
+
+/*---- Title -----*/
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  text-align: center;
+  font: 400 1.75rem 'PT Sans', sans-serif;
+  color: #272425;
+  text-transform: uppercase;
+}
+
+/*-------- Typography -------*/
+/*------------------------------------------------------------------
+  	[Button]
+------------------------------------------------------------------*/
+.btn-gold {
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #080809;
+  border: 1px solid #998349;
+  border-radius: 5px;
+  -moz-border-image: -moz-linear-gradient(top, #f2e9a6 0%, #998349 100%);
+  -webkit-border-image: -webkit-linear-gradient(top, #f2e9a6 0%, #998349 100%);
+  border-image: linear-gradient(to bottom, #f2e9a6 0%, #998349 100%);
+  border-image-slice: 1;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: .375rem 1.75rem;
+  font-size: 22px;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+.btn-gold:hover {
+  background: #3f150b;
+}
+
+.btn-red {
+  text-transform: inherit;
+  color: #f2e9a6;
+  background: #3f150b;
+  border: 1px solid #998349;
+  border-radius: 5px;
+  -moz-border-image: -moz-linear-gradient(top, #f2e9a6 0%, #998349 100%);
+  -webkit-border-image: -webkit-linear-gradient(top, #f2e9a6 0%, #998349 100%);
+  border-image: linear-gradient(to bottom, #f2e9a6 0%, #998349 100%);
+  border-image-slice: 1;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: .5rem 1.75rem;
+  font-size: 1rem;
+  line-height: 1;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+.btn-red:hover {
+  background: #080809;
+}
+
+/*------------------------------------------------------------------
+  	[FOOTER]
+------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+  	[HEADER]
+------------------------------------------------------------------*/
+.menu {
+  padding: 30px 0px;
+}
+
+.menu__lang {
+  background: #2da5e0;
+  padding: 5px;
+  margin-right: 50px;
+}
+.menu__lang .menu__lang__link {
+  color: #000;
+  text-decoration: none;
+  padding: 2px;
+  -moz-transition: all 1s ease 0s;
+  -o-transition: all 1s ease 0s;
+  -webkit-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
+}
+.menu__lang .menu__lang__link.active {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.menu-list .menu-list__item {
+  margin-left: 10px;
+  margin-right: 5px;
+}
+.menu-list .menu-list__item .menu-list__link {
+  color: #000;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 4px;
+  border-bottom: 2px solid transparent;
+  -moz-transition: all 1s ease 0s;
+  -o-transition: all 1s ease 0s;
+  -webkit-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
+}
+.menu-list .menu-list__item .menu-list__link:hover {
+  border-bottom: 2px solid #1f8bcf;
+  padding: 4px;
+}
+
+.nav-menu__link {
+  color: #000;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.nav-menu__link:hover {
+  border-bottom: 2px solid #1f8bcf;
+  padding: 4px;
+}
+
+.header-box .header-box__img {
+  background: url("../img/top-img.jpg") no-repeat 50% 50%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 333px;
+}
+
+/*------------------------------------------------------------------
+  	[INDEX] (PAGE)
+------------------------------------------------------------------*/
+/*-----------
+SERVICE
+------------*/
+.service {
+  padding: 70px 0px 0px 0px;
+}
+.service .service-list .service-list__item {
+  padding: 40px 0px;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  opacity: 1;
+  -moz-transition: all 1s ease 0s;
+  -o-transition: all 1s ease 0s;
+  -webkit-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
+}
+.service .service-list .service-list__item:hover {
+  -moz-box-shadow: 0 5px 12px rgba(216, 216, 216, 0.7);
+  -webkit-box-shadow: 0 5px 12px rgba(216, 216, 216, 0.7);
+  box-shadow: 0 5px 12px rgba(216, 216, 216, 0.7);
+  opacity: 0.8;
+}
+.service .service-list .service-list__item .service-list__link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.service .service-list .service-list__item .service-list__img {
+  color: #2da5e0;
+  margin-bottom: 10px;
+}
+
+/*-----------
+ABOUT
+------------*/
+.about {
+  background: #d5edf9;
+  padding: 30px 0px;
+}
+.about p {
+  color: #6c6d70;
+  line-height: 18px;
+}
+.about .list-group {
+  list-style: none;
+}
+.about .list-group .list-group__item {
+  margin: 3px 0px;
+  color: #6c6d70;
+  line-height: 18px;
+}
+.about .list-group .list-group__item:before {
+  content: "-";
+  position: relative;
+  left: -5px;
+  padding: 5px;
+}
+
+/*-----------
+CONTACTS
+------------*/
+.contacts-list {
+  padding: 30px 0px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.contacts-list .contacts-list__item {
+  margin-bottom: 20px;
+}
+.contacts-list .contacts-list__item .contacts-block__icon {
+  color: #1f8bcf;
+  font-size: 26px;
+  margin-right: 10px;
+}
+
+/*----------------------------------
+  CAROUSEL *Bootstrap*
+------------------------------------*/
+/*--------------------SPINER-----------------------*/
+.carousel .carousel-indicators {
+  position: absolute;
+  right: 0;
+  bottom: -10px;
+  left: 0;
+  z-index: 15;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-left: 0;
+  margin-right: 15%;
+  margin-left: 15%;
+  list-style: none;
+}
+.carousel .carousel-indicators li {
+  background: #998349;
+  opacity: 0.5;
+}
+.carousel .carousel-indicators .active {
+  background: #998349;
+  opacity: 1;
+}
+.carousel .carousel-control {
+  color: #998349;
+}
+.carousel .carousel-control-prev span {
+  position: absolute;
+  left: -35px;
+}
+.carousel .carousel-control-next span {
+  position: absolute;
+  right: -35px;
+}
+
+@media only screen and (max-width: 768px) {
+  .carousel .carousel-control {
+    color: #998349;
+    display: none;
+  }
+  .carousel .carousel-control-prev span {
+    position: absolute;
+    left: -35px;
+  }
+  .carousel .carousel-control-next span {
+    position: absolute;
+    right: -35px;
+  }
+}
+/*--------------------SPINER-end-----------------------*/
+/*------------------------------------------------------------------
+    [PageScroll2id]
+------------------------------------------------------------------*/
+/*-----------TO THE TOP BUTTON--------------*/
+.arrows-home {
+  position: fixed;
+  cursor: pointer;
+  /* modify below css to your needs */
+  width: 60px;
+  height: 60px;
+  top: 550px;
+  right: 0px;
+  z-index: 1000;
+  opacity: 0.5;
+}
+.arrows-home i {
+  color: #998349;
+  text-align: center;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -moz-transition: all 0.35s ease 0s;
+  -o-transition: all 0.35s ease 0s;
+  -webkit-transition: all 0.35s ease 0s;
+  transition: all 0.35s ease 0s;
+}
+.arrows-home i:focus, .arrows-home i:hover {
+  color: #f2e9a6;
+}
+
+/*-----------TO THE TOP BUTTON__END--------------*/
+/*------------------------------------------------------------------
+  	[Text Colors]
+------------------------------------------------------------------*/
+.color-white {
+  color: #ffffff;
+}
+
+.color-gold {
+  color: #f2e9a6;
+}
+
+/*------------------------------------------------------------------
+  	[Background Colors]
+------------------------------------------------------------------*/
+.bg-color-base {
+  background: #303031;
+}
+
+/*------------------------------------------------------------------
+  	[Text font-size]
+------------------------------------------------------------------*/
+.font-size_15 {
+  font-size: 0.9375rem;
+}
+
+.font-size_18 {
+  font-size: 1.125rem;
+}
+
+.font-size_20 {
+  font-size: 1.25rem;
+}
+
+.font-size_22 {
+  font-size: 1.375rem;
+}
+
+.font-size_25 {
+  font-size: 1.563rem;
+}
+
+.font-size_30 {
+  font-size: 1.875rem;
+}
+
+.font-size_35 {
+  font-size: 2.195rem;
+}
+
+.font-size_50 {
+  font-size: 3.125rem;
+}
+
+/*------------------------------------------------------------------
+  	[Text line-height]
+------------------------------------------------------------------*/
+.lheight1 {
+  line-height: 1;
+}
+
+.lheight1-1 {
+  line-height: 1.1;
+}
+
+.lheight1-2 {
+  line-height: 1.2;
+}
+
+.lheight1-3 {
+  line-height: 1.3;
+}
+
+.lheight1-5 {
+  line-height: 1.5;
+}
+
+/*--------------------------------------------------
+    [Font Weight]
+----------------------------------------------------*/
+.fweight-100 {
+  font-weight: 100;
+}
+
+.fweight-300 {
+  font-weight: 300;
+}
+
+.fweight-400 {
+  font-weight: 400;
+}
+
+.fweight-500 {
+  font-weight: 700;
+}
+
+.fweight-900 {
+  font-weight: 900;
+}
+
+/*------------------------------------------------------------------
+  	The ready styles contains basic default element styles
+  		(h1, h2, h3 ...)
+------------------------------------------------------------------*/
+.title {
+  margin-bottom: 15px;
+  text-align: center;
+  text-transform: inherit;
+  font-size: 4rem;
+  color: #fff;
+  line-height: 1;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+}
+@media only screen and (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+}
+
+.subtitle {
+  width: 400px;
+  text-align: center;
+  margin: 0 auto 40px;
+}
+
+.subtitle-gray {
+  color: #a5a7aa;
+  border-bottom: 2px solid #e9e9ea;
+  padding: 40px 60px 20px 60px;
+  font: 700 20px 'PT Sans', sans-serif;
+  text-transform: uppercase;
+}
+
+/*!--MARGIN-->*/
+/*!-- top -->*/
+.layout__mt-5 {
+  margin-top: 5px;
+}
+
+.layout__mt-10 {
+  margin-top: 10px;
+}
+
+.layout__mt-20 {
+  margin-top: 20px;
+}
+
+.layout__mt-30 {
+  margin-top: 30px;
+}
+
+.layout__mt-40 {
+  margin-top: 40px;
+}
+
+.layout__mt-50 {
+  margin-top: 50px;
+}
+
+.layout__mt-60 {
+  margin-top: 60px;
+}
+
+.layout__mt-100 {
+  margin-top: 100px;
+}
+
+/*!-- bottom -->*/
+.layout__mb-5 {
+  margin-bottom: 5px;
+}
+
+.layout__mb-10 {
+  margin-bottom: 10px;
+}
+
+.layout__mb-20 {
+  margin-bottom: 20px;
+}
+
+.layout__mb-30 {
+  margin-bottom: 30px;
+}
+
+.layout__mb-40 {
+  margin-bottom: 40px;
+}
+
+.layout__mb-50 {
+  margin-bottom: 50px;
+}
+
+.layout__mb-60 {
+  margin-bottom: 60px;
+}
+
+.layout__mb-100 {
+  margin-bottom: 60px;
+}
+
+/*!-- right -->*/
+.layout__mr-5 {
+  margin-right: 5px;
+}
+
+.layout__mr-10 {
+  margin-right: 10px;
+}
+
+.layout__mr-20 {
+  margin-right: 20px;
+}
+
+.layout__mr-30 {
+  margin-right: 30px;
+}
+
+.layout__mr-40 {
+  margin-right: 40px;
+}
+
+.layout__mr-50 {
+  margin-right: 50px;
+}
+
+.layout__mr-60 {
+  margin-right: 60px;
+}
+
+.layout__mr-100 {
+  margin-right: 100px;
+}
+
+/*!-- left -->*/
+.layout__ml-5 {
+  margin-left: 5px;
+}
+
+.layout__ml-10 {
+  margin-left: 10px;
+}
+
+.layout__ml-20 {
+  margin-left: 20px;
+}
+
+.layout__ml-30 {
+  margin-left: 30px;
+}
+
+.layout__ml-40 {
+  margin-left: 40px;
+}
+
+.layout__ml-50 {
+  margin-left: 50px;
+}
+
+.layout__ml-60 {
+  margin-left: 60px;
+}
+
+.layout__ml-100 {
+  margin-left: 100px;
+}
+
+/*!-- vertical -->*/
+.layout__mv-5 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.layout__mv-10 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.layout__mv-20 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.layout__mv-30 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.layout__mv-40 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.layout__mv-50 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.layout__mv-60 {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+/*!-- horizontal -->*/
+.layout__mh-5 {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.layout__mh-10 {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.layout__mh-20 {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.layout__mh-30 {
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+.layout__mh-40 {
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
+.layout__mh-50 {
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+.layout__mh-60 {
+  margin-right: 60px;
+  margin-left: 60px;
+}
+
+/*------------------@MEDIA-------------------------*/
+/*------------------@MEDIA-------------------------*/
+@media only screen and (max-width: 1230px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  html {
+    font-size: 14px;
+  }
+
+  .contacts-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+}
+/*------------------@MEDIA-END-------------------------*/
+/*------------------@MEDIA-END-------------------------*/

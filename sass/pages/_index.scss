@@ -1,0 +1,99 @@
+/*------------------------------------------------------------------
+  	[INDEX] (PAGE)
+------------------------------------------------------------------*/
+
+/*-----------
+SERVICE
+------------*/
+
+.service {
+	padding: 70px 0px 0px 0px;
+	.service-list {
+		.service-list__item {
+			padding: 40px 0px;
+			text-align: center;
+			margin-bottom: 20px;
+			position: relative;
+			opacity: 1;
+			@include transition(all, 1s, ease, 0s);
+			&:hover {
+				@include box-shadow(0, 5px, 12px, rgba(216, 216, 216, .7) );
+				opacity: 0.8;
+			}
+			.service-list__link {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				width: 100%;
+				height: 100%;
+				z-index: 2;
+			}
+			.service-list__img {
+				color: #2da5e0;
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
+
+
+/*-----------
+ABOUT
+------------*/
+
+.about {
+	background: #d5edf9;
+	padding: 30px 0px;
+	p {
+		color: #6c6d70;
+    line-height: 18px;
+	}
+	.list-group {
+		list-style: none;
+		.list-group__item {
+			margin: 3px 0px;
+			color: #6c6d70;
+    	line-height: 18px;
+		}
+		.list-group__item:before {
+			content: "-";
+			position: relative;
+			left: -5px;
+			padding: 5px;
+		}
+	}
+}
+
+/*-----------
+CONTACTS
+------------*/
+
+.contacts-list {
+	padding: 30px 0px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	flex-wrap: wrap;
+	.contacts-list__item {
+		margin-bottom: 20px;
+		.contacts-block__icon {
+			color: #1f8bcf;
+			font-size: 26px;
+			margin-right: 10px;
+		}
+	}
+}
+
+
+
+

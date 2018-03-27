@@ -1,0 +1,41 @@
+/*------------------@MEDIA-------------------------*/
+
+/*------------------@MEDIA-------------------------*/
+
+@media only screen and (max-width: 1230px) {
+	html {
+		font-size: 16px;
+	}
+}
+
+@media only screen and (max-width: 992px) {
+	html {
+		font-size: 14px;
+	}
+	.contacts-list {
+		-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;
+		.contacts-list__item {
+			.contacts-block__icon {
+				
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	html {
+		font-size: 14px;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	html {
+		font-size: 14px;
+	}
+}
+
+
+/*------------------@MEDIA-END-------------------------*/
+
+
+/*------------------@MEDIA-END-------------------------*/

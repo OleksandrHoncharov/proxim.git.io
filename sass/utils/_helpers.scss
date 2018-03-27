@@ -1,0 +1,34 @@
+/*------------------------------------------------------------------
+  	The ready styles contains basic default element styles
+  		(h1, h2, h3 ...)
+------------------------------------------------------------------*/
+
+
+.title {
+  margin-bottom: 15px;
+  text-align: center;
+  text-transform: inherit;
+  font-size: 4rem;
+  color: #fff;
+  line-height: 1;
+  font-family: $main-font;
+  font-weight: 400;
+  
+  @media only screen and (max-width: 480px) {
+    font-size: 2rem;
+  }
+}
+
+.subtitle {
+    width: 400px;
+    text-align: center;
+    margin: 0 auto 40px;
+}
+
+.subtitle-gray {
+		color: #a5a7aa;
+    border-bottom: 2px solid #e9e9ea;
+    padding: 40px 60px 20px 60px;
+    font: 700 20px 'PT Sans', sans-serif;
+    text-transform: uppercase;
+}
